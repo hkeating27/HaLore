@@ -1,0 +1,46 @@
+/*
+  Essentially transforms the page into a Dark Mode variant 
+  Aside from reducing the brightness of colors or changing them entirely, extra gradients were added for pizazz across most of the webpage.
+  A button on the left activates the change. Toggle option not included due to time limitations.
+*/
+
+
+  header {
+      background:rgb(65, 65, 65);
+      padding-bottom: 20px;
+   }
+
+   nav {
+      background: linear-gradient(to top, rgb(0, 0, 0), rgb(65, 65, 65));  
+   }
+
+   article {
+      background: linear-gradient(to top, rgb(0, 0, 0), rgb(23, 56, 23));/* Green chosen to align with Master Chief's armor */
+      grid-area: article;
+      flex: 0 1 70%; /* Defines how the article fills the page/ gets resized with window */
+      font-size: 16px;
+      text-align: left;
+      padding-top: 25px;
+      padding-left: 50px; /* Creates a border around the content to make space */
+      padding-right: 50px;
+      padding-bottom: 15px;
+      color: rgb(190, 190, 190);
+    }
+
+  aside {
+    background: linear-gradient(to top, rgb(0, 0, 0), rgb(65, 65, 65));
+    color: rgb(91, 139, 212);
+    padding-top: 30px;
+    padding-right: 10px;
+    padding-left: 20px;
+  }
+
+  footer {
+      background: rgb(0, 0, 0);
+  }
+
+  .custom_button{
+    border-color: rgb(190, 190, 190);
+    background: linear-gradient(to right, rgb(134, 92, 13), rgb(102, 44, 11)); /* Orange chosen to match Master Chief's visor color */
+    color: rgb(100, 146, 214);
+  }

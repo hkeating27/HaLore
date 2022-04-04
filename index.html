@@ -1,0 +1,191 @@
+
+<head>
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <!-- Header part of the grid -->
+    <header>
+        <img src="img/Logo_small.png" alt="HaLore" style ="width:393px; height: 37px" class = "logo">
+        <div class = "slogan">Your Guide to the Halo Universe</div>
+    </header>
+
+    <!-- Menu on the left side, with buttons calling Javascript buttons to open different sections of the page -->
+        <nav>
+            <button class = "custom_button" onclick="showHome()">Home</button>
+            <button class = "custom_button" onclick= "showCharacters()">Characters</button>
+            <button class = "custom_button" onclick= "showFactions()">Factions</button>
+            <button class = "custom_button" onclick="showContact()">Contact Us</button>
+            <button id = "swapButton" class = "custom_button" onclick="switchTheme()">Dark Theme</button>
+
+        </nav>
+
+        <!-- Articles form the central part of the grid, and majority of the page -->
+        <!-- Character page. The custom class char_image and style properties have the image justify right to the text -->
+            <article id = "Characters"> 
+                <!-- Master Chief -->
+                <img style="float: right; margin: 0px 0px 15px 15px;" src="img/Master_Chief_small.png" class = char_image>
+                <div class = "title" >Master Chief </div>
+
+                <div class = "content">
+                <p>Master Chief John-117 (usually referred to by his rank) was kidnapped at the age of 6 by the secretive 
+                UNSC agency ONI (Office of Naval Intelligence) after medical tests showed his neural activity was compatible
+                with the experimental MJOLLNIR armor engineered as part of the SPARTAN-II program.</p>
+                <p>Along with 74 other children 
+                of the same age group, they were forced into a hard life of physical and mental training, as well as various bodily 
+                augmentations to both improve physical performance and heighten compatiblity with MJOLLNIR suits. While he usually 
+                operates on the field as part of Blue Team, most of the games showcase him as working without any fellow SPARTAN-II's.
+                </p>
+                </div>
+                <!-- Cortana -->
+                <img style="float: right; margin: 0px 0px 15px 15px;" src="img/Cortana_small.png" class = char_image>
+                <div class = "title" >Cortana</div> 
+                <p>Cortana is a "smart" AI, and the first of her kind. Unlike other AI developed by the UNSC, Cortana has her own personality and
+                acts akin to a human. Her original personality is a copy of her creator Dr. Halsey, who was also a key figure in the SPARTAN 
+                program.</p> 
+                <p>
+                Her technological capabilities are unparalleled, from infiltrating alien starships to storing the entirety of Alpha Halo's 
+                data. She can interface with virtually any computer, including the ones built into MJOLLNIR armor, and both communicate over radio
+                and project herself as a small hologram.
+                </p>
+
+                <!-- The Arbiter -->
+                <div class = "title" >The Arbiter</div> 
+                <img style="float: right; margin: 0px 0px 15px 15px;" src="img/Arbiter_small.png" class = char_image>
+                <div class = "content">
+                <p>Thel'Vadam is a member of the Sangheli race of the Covenant (usually referred to by UNSC soldiers as "Elites"), and was tasked with
+                the safekeeping of Alpha Halo. After the superweapon was destroyed at the end of Halo: Combat Evolved, the Covenant deemed him a heretic
+                for failing to protect this vital artifact. While he was given a death sentence for heresy, he was in secret offered the title of "Arbiter",
+                a line of historic figures sent out on suicidal missions that required stealthy, highly skilled operatives. </p> 
+                <p>
+                Upon his travels he met the "Oracle",in actuality the Monitor Guilty Spark-117 of Alpha Halo, who shared with him the truth of the Halo rings' destructive purpose. This revelation
+                led to a schism in The Covenant with the Sangheli leaving to ally with humanity, and the Arbiter fighting alongside Master Chief.
+                </p>
+                </div>
+                
+                <!-- Guilty Spark 343 -->
+                <div class = "title" >Guilty Spark-343</div> 
+                <img style="float: right; margin: 0px 0px 15px 15px;" src="img/343_Guilty_Spark_small.png" class = char_image>
+                <div class = "content">
+                <p>Guilty Spark 343 is an AI created by the Forerunners to act as Monitor of Installation 04, also known as Alpha Halo. Its purpose is to ensure the
+                maintenance of Alpha Halo, containment of Flood specimens, and activation of its firing sequence in the case of a Flood outbreak. After the destruction 
+                of Alpha Halo it is found by members of the Covenant, and is worshipped as an "Oracle", before it shares the true nature of Halo. Guilty Spark houses no 
+                ill intentions, and is seeking only to fulfill its preprogrammed instructions. </p>
+                </div>
+            </article>
+
+
+            <!-- Factions. Uses the same formatting as Characters for image placement -->
+            <article id = "Factions"> 
+                <!-- UNSC -->
+                <img style="float: right; margin: 0px 0px 15px 15px;" src="img/UNSC_small.png" class = char_image>
+                <div class = "title" >United Nations Space Command (UNSC) </div>
+                <div class = content>
+                <p>The United Nations Space Command (UNSC) was formed as a singular military unit to handle extraterrestrial combat between Earth, Reach, and
+                the various human colonies spread across the stars. However, when the Human-Covenant War began, the UNSC rapidly took command over all military assets,
+                expending incredible amounts of resources in the hopes of preventing the extinction of mankind. </p><p>They also formed the covert Office of Naval Intelligence (ONI),
+                which placed humanity's survival over individual rights or moderate loss of human life. This directly led to the creation of the SPARTAN program and Cortana,
+                and by extension the defeat of the Covenant and eradication of the Flood.</p>
+                </div>
+
+                <!-- The Covenant -->
+                <img style="float: right; margin: 0px 0px 15px 15px;" src="img/Covenant_small.png" class = char_image>
+                <div class = "title" >The Covenant</div> 
+                <div class = "content">
+                The Covenant are a warmongering religion worshipping relics made by The Forerunners, not truly understanding the makers or their creations. The Covenant are comprised
+                of multiple species of aliens, including the: 
+                <ul>
+                <li>San'Shyuum ("Prophets")</li>
+                <li>Sangheili ("Elites")</li>
+                <li>Jiralhanae ("Brutes")</li>
+                <li>Lekgolo ("Hunters")</li>
+                <li>Unggoy ("Grunts")</li>
+                <li>Kig-Yar ("Jackals")</li>
+                <li>Yanme'e ("Drones")</li>
+                <li>Huragok("Engineers")</li>
+                </ul>with each race having very distinct biology and combat abilities, as well as position in 
+                their caste system. During the Schism at the very end of the Human-Covenant War, the Sangheili abandoned the Covenant and took up arms alongside the humans to stop 
+                their ignorance and treachery.
+                </div>
+
+                <!-- The Flood -->
+                <img style="float: right; margin: 0px 0px 15px 15px;" src="img/Flood_small.png" class = char_image>
+                <div class = "title" >The Flood</div> 
+                <div class = "content">
+                The Flood are a form of parasite that hijack living beings and transform them into abominations, seeking only to spread their control across other lifeforms. Flood parasites
+                can "evolve" to higher states, the most powerful known being Gravemind, capable of controlling other Flood as part of a hivemind. Under its control the Flood
+                are capable of using interstellar travel when available, potentially infecting all life. The Halo rings were initially created to destroy the Flood, but some specimens remained
+                in containment in case future experimentation was needed.
+                </div>
+
+                <!-- The Forerunners -->
+                <img style="float: right; margin: 0px 0px 15px 15px;" src="img/Forerunner_small.png" class = char_image>
+                <div class = "title" >The Forerunners</div> 
+                <div class = "content">
+                The Forerunners were a mysterious race that existed over 100,000 years ago, of a greater scale and with superior technology far beyond anything currently in the galaxy, including the 
+                creation of the Halo ringworlds. They activated the Halo array at the time of their demise to wipe out life on planets infected by The Flood (including themselves), only creating shield worlds
+                on planets confirmed to be uninfected, including Earth.    
+                </div>         
+            </article>
+
+            <!-- Contact Page -->
+            <article id = "Contact"> You can contact the site owner via email to 10698779@uvu.edu, plane contrail messages over Lehi, UT, or hacking their IP address 127.0.0.1</article>
+
+            <!-- Home Page -->
+            <article id = "Home">
+                <!-- An overview of the setting and factions -->
+                <div class = "title" >Overview</div>
+                <div class = "content">
+                <p>The main Halo saga takes place across a war raging from the years 2525 and 2552. Humanity is stuggling to survive
+                genocide by a religious empire of various alien species known as "The Covenant", who are seeking out artifacts 
+                from an ancient civilization known only as "The Forerunners".</p> <p>Head among these religious icons are the Halo rings, which the Covenant
+                believe will complete "The Great Journey" and bring salvation. However, the true design for these artificial ringworlds was that of mass
+                annihilation, as the combined activation of the Halo rings would purge the entirety of the galaxy of life. 
+                The rings were designed to do so to wipe out a superparasite known as "The Flood" to prevent it from contaminating all life in the universe.
+                </p>
+                </div>
+                <!-- A more technical background looking at the series from a meta perspective -->
+                <div class = "title" >Background</div>
+                <div class = "content">
+                <p>The first entry in the franchise was the video game Halo: Combat Evolved, developed by Bungie Studios and 
+                published by Microsoft in 2001 as a killer app for their new console, the Xbox. Its combination of compelling storytelling,
+                unique gameplay, and an unprecedented multiplayer experience made it a massive success, and it would later be compiled 
+                with other games in the series as part of the Master Chief Collection on Xbox One and PC.</p> <p>This spawned a massive franchise
+                consisting of games, books, comics, and animation. The latest game entry, Halo: Infinite is set to release on December 8, 2021,
+                and will follow a post-war storyline where Master Chief must face a new alien group called the Banished across the ringworld Zeta Halo.</p>
+                </div>
+                <!-- Youtube-integrated video. Custom CSS classes had to be implemented to resize effectively -->
+                <div class = "video_title">Halo: Infinite Dev Commentary and Story Trailer:<br></div> 
+                <div class="video_container">
+                    <iframe class="responsive-iframe" src="https://www.youtube.com/embed/JNhrhYRRUO8"></iframe>    
+                </div>         
+            </article>
+            
+
+        <!-- Aside part of the grid. Due to project limitations, the MA5B is Weapon of the Day, every day -->
+        <aside id = "Aside"> 
+            <div class = "title">
+                <u>Weapon of the Day:</u><br><br>
+                <img src="img/MA5B_medium.png" alt="MA5B" class = "img">
+                <figcaption> <strong>MA5B Assault Rifle</strong>	
+            </div>		
+                <ul>
+				    <li>First Appearance: Halo: CE (2001)</li>
+                    <li>Faction: UNSC</li>
+				    <li>Ammunition Type: 7.62mm Full Metal Jacket</li>
+                    <li>Rate of Fire: 15 rounds/sec</li>
+				    <li>Magazine Capacity: 60 rounds</li>
+                    <li>Effective Range: 300m</li>
+			    </ul>
+                </figcaption>     
+        </aside>
+
+    <!-- Footer section of the grid at the bottom. My only regret is not being able to monetize the advertising. -->
+    <footer> <a href = "https://store.steampowered.com/app/976730/Halo_The_Master_Chief_Collection/">Purchase The Master Chief Collection on Steam</a>
+    <footer> <a href = "https://store.steampowered.com/app/1240440/Halo_Infinite/">Preorder the Halo: Infinite Campaign on Steam</a></footer>
+</body>
+
