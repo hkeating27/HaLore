@@ -1,0 +1,183 @@
+/*
+Changelog for Project 4:
+* Fixed left menu not aligning with the top of the article div
+* Increased padding across the site
+* Added gradients and edited colors across the board
+* Divided text into specialized paragraphs, removing repeating breakpoints in favor of margins. Also added a bullet list.
+* More padding between elements to increase whitespace
+*/
+
+
+/* Font imported */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600&display=swap');
+
+
+/* Unclicked link, used only in the footers */
+a:link {
+  color: rgb(58, 109, 185);
+  font-size: 16px;
+}
+/* Visited link. The color darkens slightly, since purple completely throws off the aesthetic */
+a:visited {
+  color: rgb(49, 94, 160);
+  font-size: 16px;
+}
+/* Basic image settings for resizing */
+img {
+  width: 100%;
+  height: auto;
+}
+/* Special setting for character and faction images. The reduced width allows for them to align with paragraphs */
+.char_image{
+  width: 20%;
+  height: auto;
+}
+
+
+/* Title for the video. Could have just been made as a typical div, but this is more efficient and descriptive */
+.video_title {
+  text-align: center;
+  font-size: 20px;
+  text-decoration: underline;
+}
+
+/* Container for the video */
+.video_container {
+  position: relative; /* Ensures the video fits within/is aligned with the article section*/
+  padding-top: 56.25%; /* This padding is needed to render the video*/
+}
+
+/* Setup for the responsive iframe used in the Home video, keeping the size of the interior limited to 70% and auto. Merging the two just creates difficulties*/
+iframe{
+  width: 70%;
+  height: auto;
+}
+/* The video is placed here */
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  /* These width/heightsettings ensure the video maintains its 16:9 aspect ratio. All other attempts failed */
+  width: 100%;
+  height: 100%;
+}
+
+/* Buttons on the nav menu on the left */
+.custom_button{
+  min-width: 100%;
+  max-width: 100%;
+  background: linear-gradient(to right, rgb(192, 119, 30), rgb(219, 127, 51)); /* Orange chosen to match Master Chief's visor color */
+  color: rgb(49, 94, 160);
+  font-size: large;
+  padding: 10px 32px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  text-align: left;
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+/* How the button changes when the mouse hovers over it*/
+.custom_button:hover {
+  background-color: #206b23; /* Green */
+  color: white;
+}
+
+/* HaLore logo at the top left in the header. Actually an image.*/
+.logo{
+  position: absolute;
+  left: 5px;
+  bottom: 5px;
+}
+
+/* Generic Title used in multiple sections */
+.title{
+  font-size: 20px;
+  text-align: center;
+  text-decoration: underline;
+}
+
+/* Settings for the site's layout, creating a grid and eventual flexbox integration */
+body {
+    font-family: 'Roboto Mono', serif; /* Font used in the site, designed to give a more scifi aesthetic */
+    display: grid; 
+    text-align: center;
+    margin: 0; /* Needed to prevent white bars at the top and bottom */
+    grid-template-columns: 12% 70% 18%; /* Relative size of every column */
+    grid-template-rows: 50px auto 70px; /* Relative size of every row */
+    /* Arrangement of every element in a 3x3 grid */
+    grid-template-areas: 
+       "head head head"
+       "nav article aside"
+       "foot foot foot";
+ }
+
+ /* Slogan at the bottom-right of the header */
+.slogan{
+    position: absolute;
+    /* Places the element */
+    bottom: 0;
+    right: 0;
+    font-size: 24px;
+    margin-right: 30px;
+    color: rgb(83, 127, 194);
+    font-style: italic;
+}
+
+/* Header at the top of the grid (not to be confused with default HTML terminology) */
+ header {
+    background:rgb(168, 156, 156);
+    grid-area: head;
+    flex: 0 1 100%; /* Header size will be static */
+    position: sticky; /* Ensures it stays at the top */
+ }
+ 
+ /* Menu on the left. Most settings are in the button section. */
+ nav {
+  background: linear-gradient(to top, rgb(73, 73, 73),  rgb(168, 156, 156));
+  grid-area: nav;
+  flex: 0 1 20%; /* Defines how it shrinks with the page */
+ }
+ 
+ /* Central content that changes based on page. */
+ article {
+   background: linear-gradient(to top, rgb(51, 87, 43), rgb(100, 177, 100));/* Green chosen to align with Master Chief's armor */
+   grid-area: article;
+   flex: 0 1 70%; /* Defines how the article fills the page/ gets resized with window */
+   font-size: 16px;
+   text-align: left;
+   padding: 25px; /* Creates a border around the content to make space */
+ }
+ 
+/* Side menu on the left */
+aside {
+   background: linear-gradient(to top, rgb(73, 73, 73),  rgb(168, 156, 156));
+   color: rgb(58, 109, 185);
+   grid-area: aside;
+   padding-top: 30px;
+   padding-right: 10px;
+   padding-left: 5px;
+   flex: 0 1 10%; /* Defines how the article fills the page/ gets resized with window */
+   font-size: 16px;
+   text-align: left;
+ }
+ 
+ /* Footer at the bottom */
+ footer {
+   background: rgb(73, 73, 73);
+   grid-area: foot;
+   flex: 0 1 10%; /* Defines how the article fills the page/ gets resized with window */
+   flex-shrink: 0;
+   justify-content: center;
+   align-items: center;
+   padding-top: 5px;
+ }
+
+ /*Used for content sections to avoid multiple <br>s*/
+ .content{
+   margin-bottom: 40px;
+ }
